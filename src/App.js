@@ -1,7 +1,15 @@
+import React from 'react'
 import logo from './logo.svg';
 import './App.css';
+import {getCameraAccess} from './media'
 
 function App() {
+
+  React.useEffect( () => {
+    const camera = getCameraAccess();
+    console.log(camera)
+  })
+
   return (
     <div className="App">
       <header className="App-header">
